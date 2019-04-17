@@ -18,7 +18,6 @@ for i, flat in enumerate(flats_list):
 # подсчет количества новостроек
 print('Итого: {} новостройки\n\n'.format(count))
 
-
 # описание квартиры в виде словаря
 flat_info = {}
 for flat in flats_list:
@@ -39,7 +38,6 @@ for flat in flats_list:
                                 'type': flat[2],
                                 'price': flat[11]})
 pprint(subway_dict)
-
 
 # подсчет квартир у каждого метро
 for subway in subway_dict:
