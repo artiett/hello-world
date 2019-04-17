@@ -22,8 +22,8 @@ print('Итого: {} новостройки\n\n'.format(count))
 # описание квартиры в виде словаря
 flat_info = {}
 for flat in flats_list:
-    flat_info = {"id": flat[0], "rooms": flat[1],
-                 "type": flat[2], "price": flat[11]}
+    flat_info = {'id': flat[0], 'rooms': flat[1],
+                 'type': flat[2], 'price': flat[11]}
     print('В квартире с ID {} {} комнат. {}, стоит {}₽'
           .format(flat_info['id'], flat_info['rooms'],
                   flat_info['type'].capitalize(), flat_info['price']))
@@ -34,8 +34,12 @@ for flat in flats_list:
     subway = flat[3].replace("м.", "")
     if subway not in subway_dict.keys():
         subway_dict[subway] = list()
-    subway_dict[subway].append(flat[0:3])
+    subway_dict[subway].append({'id': flat[0],
+                                'rooms': flat[1],
+                                'type': flat[2],
+                                'price': flat[11]})
 pprint(subway_dict)
+
 
 # подсчет квартир у каждого метро
 for subway in subway_dict:
