@@ -22,10 +22,6 @@ class DomesticAnimals:
         else:
             print('Уже кормили это животное')
 
-    # farm_weight = 0
-    # for weight in self.weight:
-    #     farm_weight += weight[0]
-
 class Birds(DomesticAnimals):
     wings = True
     eggs = True
